@@ -22,7 +22,6 @@ public class Main {
             new Clothing("M0010", "black belt", "L", 10.5f),
     };
 
-
     static List<Clothing> shoppingCart = new ArrayList<>();
 
     //**************************************************************************//
