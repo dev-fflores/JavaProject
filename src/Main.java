@@ -42,35 +42,28 @@ public class Main {
             optionMenu = in.nextLine();
 
             switch (optionMenu) {
-                case "1":
-                    ShowStorageSubMenu();
-                    break;
-                case "2":
-                    if (!Objects.equals(client, null)){
+                case "1" -> ShowStorageSubMenu();
+                case "2" -> {
+                    if (!Objects.equals(client, null)) {
                         continue;
                     }
                     ShowRegisterClientMenu();
-                    break;
-                case "3":
-                    ShowEnterSale();
-                    break;
-                case "4":
+                }
+                case "3" -> ShowEnterSale();
+                case "4" -> {
                     //show information of list  y usuario
-                    if(Objects.equals(client, null)){
+                    if (Objects.equals(client, null)) {
                         continue;
                     }
                     ShowSaleInformation(client, shoppingCart);
-
                     client = null;
                     shoppingCart.clear();
-
-                    break;
-                case "5":
+                }
+                case "5" -> {
                     isExitPressed = true;
                     System.out.println("Gracias por visita");
-                    break;
-                default:
-                    System.out.println("Ingrese una opción correcta");
+                }
+                default -> System.out.println("Ingrese una opción correcta");
             }
         }
 
